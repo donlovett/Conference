@@ -2,6 +2,7 @@ public with sharing class EmailManager{
 
     public static void sendMail(String address, String subject, String body) {
         Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+        // the to directory goes here
         String[] toAddresses = new String[] {address};
         mail.setToAddresses(toAddresses);
         mail.setSubject(subject);
